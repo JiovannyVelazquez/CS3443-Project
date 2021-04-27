@@ -25,6 +25,5 @@ public class Inventory {
 	//Returns true when item successfully removed
 	public void removeItem(Item itemGiven) {
 		inventory.remove(itemGiven);
-	}
-	
+	}	
 }
