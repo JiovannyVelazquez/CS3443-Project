@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerRoom2">
+   <children>
+      <ImageView fitHeight="450.0" fitWidth="600.0" layoutX="7.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Desktop/kitchen.jpeg" />
+         </image>
+      </ImageView>
+      <VBox layoutX="14.0" layoutY="415.0" prefHeight="178.0" prefWidth="407.0">
+         <children>
+            <Label prefHeight="37.0" prefWidth="405.0" text="Its seems like you are in a kitchen..." textFill="#936565">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="31.0" prefWidth="407.0" text="look for a key or items to craft weapons." textFill="#936565">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="33.0" prefWidth="398.0" text="and get out of here." textFill="#936565">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Button layoutX="685.0" layoutY="549.0" mnemonicParsing="false" onAction="#changeSceneButtonPushed" prefHeight="37.0" prefWidth="101.0" style="-fx-background-color: black;" text="Next Room-&gt;" textFill="#936565" />
+      <Button layoutX="569.0" layoutY="554.0" mnemonicParsing="false" onAction="#changeBackSceneButtonPushed" prefHeight="31.0" prefWidth="101.0" style="-fx-background-color: black;" text="&lt;-Go back" textFill="#936565" />
+   </children>
+</AnchorPane>
