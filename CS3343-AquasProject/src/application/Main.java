@@ -7,15 +7,17 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 
+
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("/view/Main.fxml"));
-			Scene scene = new Scene(root,800,800);
+			Parent root = FXMLLoader.load(getClass().getResource("/view/StartGame.fxml"));
+			Scene scene = new Scene(root,800,600);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
+			primaryStage.setResizable(false);
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
