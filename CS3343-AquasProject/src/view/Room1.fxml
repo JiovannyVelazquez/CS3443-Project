@@ -15,12 +15,12 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerRoom1">
    <children>
-      <ImageView fitHeight="437.0" fitWidth="577.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="450.0" fitWidth="600.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../Downloads/peter-herrmann-d-8_X7Ffxj4-unsplash.jpg" />
          </image>
       </ImageView>
-      <VBox layoutX="14.0" layoutY="390.0" prefHeight="196.0" prefWidth="423.0">
+      <VBox layoutX="14.0" layoutY="411.0" prefHeight="175.0" prefWidth="423.0">
          <children>
             <Label alignment="TOP_LEFT" prefHeight="24.0" prefWidth="428.0" text="you just wake up and realize that you been kiddnaped.  " textFill="#936565">
                <font>
@@ -58,13 +58,13 @@
             <Insets left="15.0" top="30.0" />
          </padding>
       </VBox>
-      <ListView fx:id="listView" layoutX="437.0" layoutY="392.0" prefHeight="200.0" prefWidth="90.0" style="-fx-background-color: #936565;" />
+      <ListView fx:id="listView" layoutX="437.0" layoutY="392.0" opacity="0.6" prefHeight="200.0" prefWidth="90.0" style="-fx-background-color: #936565;" />
       <StackPane layoutX="530.0" layoutY="392.0" prefHeight="200.0" prefWidth="60.0">
          <children>
             <Button mnemonicParsing="false" onAction="#listViewButtonPushed" text="mix" />
          </children>
       </StackPane>
-      <TextArea fx:id="golfTextArea" layoutX="597.0" layoutY="396.0" prefHeight="196.0" prefWidth="90.0" style="-fx-background-color: #936565;" />
+      <TextArea fx:id="golfTextArea" layoutX="597.0" layoutY="396.0" opacity="0.6" prefHeight="196.0" prefWidth="90.0" style="-fx-background-color: #9365653;" />
       <Button alignment="TOP_LEFT" layoutX="702.0" layoutY="550.0" mnemonicParsing="false" onAction="#changeSceneButtonPushed" prefHeight="36.0" prefWidth="98.0" style="-fx-background-color: Black;" text=" Next Room -&gt;" textFill="#936565" />
    </children>
 </AnchorPane>
