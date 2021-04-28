@@ -20,7 +20,7 @@
       </ImageView>
       <VBox layoutX="14.0" layoutY="411.0" prefHeight="175.0" prefWidth="406.0">
          <children>
-            <Label prefHeight="24.0" prefWidth="422.0" text="This is room 1:" textFill="#936565">
+            <Label prefHeight="24.0" prefWidth="422.0" text="This is room 4" textFill="#936565">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Label>

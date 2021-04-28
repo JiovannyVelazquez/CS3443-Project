@@ -2,16 +2,84 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerRoom3">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
    <children>
-      <Label layoutX="241.0" layoutY="95.0" text="Room 3">
-         <font>
-            <Font size="96.0" />
-         </font>
-      </Label>
-      <Button layoutX="709.0" layoutY="538.0" mnemonicParsing="false" onAction="#changeBackSceneButtonPushed" text="Go back" />
+      <ImageView fitHeight="391.0" fitWidth="634.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/peter-herrmann-d-8_X7Ffxj4-unsplash.jpg" />
+         </image>
+      </ImageView>
+      <VBox layoutX="14.0" layoutY="411.0" prefHeight="175.0" prefWidth="406.0">
+         <children>
+            <Label prefHeight="24.0" prefWidth="422.0" text="This is room 3" textFill="#936565">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label text="It is dark, you can somewhat see the walls" textFill="#936565">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label text="somethings are hanging from the walls, bones." textFill="#936565">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <Label text="This is another sentence" textFill="#936565">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Pane layoutX="420.0" layoutY="399.0" prefHeight="200.0" prefWidth="480.0">
+         <children>
+            <TextField fx:id="item1Input" layoutX="16.0" layoutY="-4.0" prefHeight="37.0" prefWidth="120.0" />
+            <TextField fx:id="item2Input" layoutX="180.0" layoutY="-4.0" prefHeight="37.0" prefWidth="120.0" />
+            <TextArea fx:id="combOutput" layoutX="344.0" layoutY="-4.0" prefHeight="37.0" prefWidth="130.0" />
+            <Label layoutX="148.0" layoutY="-1.0" prefHeight="30.0" prefWidth="19.0" text="+" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="314.0" layoutY="-1.0" text="=" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="46.0" text="Go to..." textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="room1Button" layoutX="19.0" layoutY="73.0" mnemonicParsing="false" onAction="#goToRoom1" text="Room 1" />
+            <Button fx:id="room2Button" layoutX="75.0" layoutY="73.0" mnemonicParsing="false" onAction="#goToRoom2" text="Room 2" />
+            <Button fx:id="room3Button" layoutX="19.0" layoutY="98.0" mnemonicParsing="false" onAction="#goToRoom3" text="Room 3" />
+            <Button fx:id="room4Button" layoutX="75.0" layoutY="98.0" mnemonicParsing="false" onAction="#goToRoom4" text="Room 4" />
+            <Button layoutX="19.0" layoutY="123.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Door" />
+            <Button layoutX="377.0" layoutY="47.0" mnemonicParsing="false" onAction="#combine" text="Combine" />
+            <TextField layoutX="174.0" layoutY="111.0" prefHeight="25.0" prefWidth="120.0" />
+            <TextField layoutX="328.0" layoutY="111.0" prefHeight="25.0" prefWidth="120.0" />
+            <Button layoutX="206.0" layoutY="148.0" mnemonicParsing="false" text="Pick Up" />
+            <Button layoutX="360.0" layoutY="148.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="56.0" text="Drop" />
+         </children>
+      </Pane>
+      <Pane layoutX="636.0" prefHeight="382.0" prefWidth="264.0">
+         <children>
+            <Label layoutX="7.0" prefHeight="37.0" prefWidth="174.0" text="Inventory" textFill="WHITE">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <TextArea layoutX="10.0" layoutY="53.0" prefHeight="155.0" prefWidth="249.0" />
+         </children>
+      </Pane>
    </children>
 </AnchorPane>

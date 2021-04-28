@@ -1,9 +1,8 @@
 package model;
 
-<<<<<<< HEAD
+
 import java.util.ArrayList;
 
-=======
 /**
  * Inventory is a java class that represents the players inventory that holds items 
  *  
@@ -11,11 +10,8 @@ import java.util.ArrayList;
  * UTSA CS 3443.002 - TeamProjecct
  * Spring 2021
  */
->>>>>>> refs/remotes/origin/master
 public class Inventory {
 	private ArrayList<Item> inventory;
-	
-	
 	//Returns true or false depending if item 
 	//was accepted in the inventory (false if 
 	//inventory is full)
@@ -31,9 +27,8 @@ public class Inventory {
 		}
 		return notfull;
 	}
-
 	//Returns true when item successfully removed
 	public void removeItem(Item itemGiven) {
 		inventory.remove(itemGiven);
-	}	
+	}
 }
