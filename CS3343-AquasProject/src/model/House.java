@@ -61,16 +61,16 @@ public class House {
 	public void loadItems(String fileName) throws IOException {
 		String line = null;
 		String itemName = "";
-		String lockCode = "";
+		String itemCode = "";
 		String itemRoomCode = "";
 		FileReader fileReader = new FileReader(fileName);
 		BufferedReader bufferedReader = new BufferedReader(fileReader);
 		while ((line = bufferedReader.readLine()) != null) {
 			String[] temp = line.split(",");
 		    itemName = temp[0];
-		    lockCode = temp[1];
+		    itemCode = temp[1];
 		    itemRoomCode = temp[2];
-		    Item item = new Item(itemName, lockCode, itemRoomCode); 
+		    Item item = new Item(itemName, itemCode, itemRoomCode); 
 		    
 		    int count = 0;
 		    while (roomArray.size() > count) { 

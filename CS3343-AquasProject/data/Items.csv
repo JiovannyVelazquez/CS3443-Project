@@ -1,4 +1,16 @@
-key1,lock1,code1
-key2,lock2,code2
-key3,lock3,code3
-key4,lock4,code4
+key1,c1,code1
+key2,c2,code2
+key3,c3,code3
+key4,c4,code4
+vase,p1,code1
+hammer,p1,code2
+scissors,p2,code3
+box,p2,code4
+safe,p3,code1
+safePassword,p3,code2
+square,p4,code3
+square shaped hole,p4,code4
+lock1,c1,code5
+lock2,c2,code5
+lock3,c3,code5
+lock4,c4,code5
