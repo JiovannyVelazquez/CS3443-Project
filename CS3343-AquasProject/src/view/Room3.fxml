@@ -20,7 +20,7 @@
       </ImageView>
       <VBox layoutX="14.0" layoutY="411.0" prefHeight="175.0" prefWidth="406.0">
          <children>
-            <Label prefHeight="24.0" prefWidth="422.0" text="This is room 3" textFill="#936565">
+            <Label prefHeight="24.0" prefWidth="422.0" text="This is room 3:" textFill="#936565">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Label>
@@ -63,12 +63,12 @@
             <Button fx:id="room2Button" layoutX="75.0" layoutY="73.0" mnemonicParsing="false" onAction="#goToRoom2" text="Room 2" />
             <Button fx:id="room3Button" layoutX="19.0" layoutY="98.0" mnemonicParsing="false" onAction="#goToRoom3" text="Room 3" />
             <Button fx:id="room4Button" layoutX="75.0" layoutY="98.0" mnemonicParsing="false" onAction="#goToRoom4" text="Room 4" />
-            <Button layoutX="19.0" layoutY="123.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="57.0" text="Door" />
+            <Button fx:id="doorButton" layoutX="19.0" layoutY="123.0" mnemonicParsing="false" onAction="#goToRoomDoor" prefHeight="25.0" prefWidth="57.0" text="Door" />
             <Button layoutX="377.0" layoutY="47.0" mnemonicParsing="false" onAction="#combine" text="Combine" />
-            <TextField layoutX="174.0" layoutY="111.0" prefHeight="25.0" prefWidth="120.0" />
-            <TextField layoutX="328.0" layoutY="111.0" prefHeight="25.0" prefWidth="120.0" />
-            <Button layoutX="206.0" layoutY="148.0" mnemonicParsing="false" text="Pick Up" />
-            <Button layoutX="360.0" layoutY="148.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="56.0" text="Drop" />
+            <TextField fx:id="pickUpInput" layoutX="174.0" layoutY="111.0" prefHeight="25.0" prefWidth="120.0" />
+            <TextField fx:id="dropInput" layoutX="328.0" layoutY="111.0" prefHeight="25.0" prefWidth="120.0" />
+            <Button fx:id="pickUpButton" layoutX="206.0" layoutY="148.0" mnemonicParsing="false" onAction="#pickUpItem" text="Pick Up" />
+            <Button fx:id="dropButton" layoutX="360.0" layoutY="148.0" mnemonicParsing="false" onAction="#dropItem" prefHeight="25.0" prefWidth="56.0" text="Drop" />
          </children>
       </Pane>
       <Pane layoutX="636.0" prefHeight="382.0" prefWidth="264.0">
@@ -78,7 +78,8 @@
                   <Font size="36.0" />
                </font>
             </Label>
-            <TextArea layoutX="10.0" layoutY="53.0" prefHeight="155.0" prefWidth="249.0" />
+            <TextArea fx:id="inventoryText" layoutX="10.0" layoutY="53.0" prefHeight="155.0" prefWidth="249.0" />
+            <Button layoutX="57.0" layoutY="216.0" mnemonicParsing="false" onAction="#setInventory" text="Display Current Inventory" />
          </children>
       </Pane>
    </children>

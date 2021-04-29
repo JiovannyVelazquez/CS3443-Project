@@ -10,7 +10,7 @@ package model;
 public class Item {
 
 	private String itemName; //name of item represented as a string
-	private String lockCode; //code of lock to match with item represented as a string
+	private String itemCode; //code to match with item represented as a string
 	private String itemRoomCode; //code of room to match with item represented as a string
 	
 	/**
@@ -33,16 +33,16 @@ public class Item {
 	 * returns the code of the lock that matches the item
 	 * @return string matching lock code of this item
 	 */
-	public String getLockCode() {
-		return lockCode;
+	public String getItemCode() {
+		return itemCode;
 	}
 	
 	/**
-	 * sets the matching lock code of the item
-	 * @param lockCode set on this item (String)
+	 * sets the matching item code of the item
+	 * @param itemCode set on this item (String)
 	 */
-	public void setLockCode(String lockCode) {
-		this.lockCode = lockCode;
+	public void setItemCode(String icode) {
+		this.itemCode = icode;
 	}
 	
 	/**
@@ -67,16 +67,27 @@ public class Item {
 	 * @param lockCode
 	 * @param itemRoomCode
 	 */
-	public Item(String itemName, String lockCode, String itemRoomCode) {
+	public Item(String itemName, String icode, String itemRoomCode) {
 		this.itemName = itemName;
-		this.lockCode = lockCode;
+		this.itemCode = icode;
 		this.itemRoomCode = itemRoomCode;
+	}
+	/**
+	 * Defauly constructor for the item object
+	 * @param itemName
+	 * @param itemCode
+	 * @param itemRoomCode
+	 */
+	public Item() {
+		this.itemName = "DefaultNameItem";
+		this.itemCode = "DefaultItemCode";
+		this.itemRoomCode = "DefaultCodeRoom";
 	}
 	
 	/**
 	 * toString method that represents a item object
 	 */
 	public String toString() {
-		return String.format("- %s: lockCode is %s | itemRoomCode is %s\n", itemName, lockCode, itemRoomCode);
+		return String.format("- %s: lockCode is %s | itemRoomCode is %s\n", itemName, itemCode, itemRoomCode);
 	}
 }

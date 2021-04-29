@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class House {
 	
 	private String houseName; //name of the House object represented as a string
-	private ArrayList<Room> room; //arraylist of room objects
+	private ArrayList<Room> roomArray; //arraylist of room objects
 	
 	/**
 	 * returns the name of the House
@@ -48,7 +48,7 @@ public class House {
 			String[] temp = line.split(",");
 		    roomName = temp[0];
 		    roomCode = temp[1];
-		    room.add(new Room(roomName, roomCode)); 
+		    roomArray.add(new Room(roomName, roomCode)); 
 		}
 		bufferedReader.close();
 	}
@@ -73,11 +73,11 @@ public class House {
 		    Item item = new Item(itemName, lockCode, itemRoomCode); 
 		    
 		    int count = 0;
-		    while (room.size() > count) { 
-		    	String curRoom = room.get(count).getRoomCode();
+		    while (roomArray.size() > count) { 
+		    	String curRoom = roomArray.get(count).getRoomCode();
 		    	
 		    	if (curRoom.equals(itemRoomCode)) { 
-		    		(room.get(count)).addItem(item); 
+		    		(roomArray.get(count)).addItem(item); 
 		    	}
 		    	count++;
 		    }
@@ -91,14 +91,22 @@ public class House {
 	 */
 	public House(String houseName) {
 		this.houseName = houseName;
-		room = new ArrayList<Room>();
+		roomArray = new ArrayList<Room>();
 	}
 	
 	/**
 	 * toString method that represents a house object
 	 */
 	public String toString() {
-		return String.format(room.toString().replace(",", "").replace("\n ", "\n"));
+		return String.format(roomArray.toString().replace(",", "").replace("\n ", "\n"));
 	}
 	
+	
+	//Returns the room we are currently on in
+	//used by the drop button and pick up button(will list
+	//which other ones will use it later if need be)
+	public Room getRoomObject(int roomNum) {
+		//Returns room object based on current room number
+		return roomArray.get(roomNum-1);
+	}
 }

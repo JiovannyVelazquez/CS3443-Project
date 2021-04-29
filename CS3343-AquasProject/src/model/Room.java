@@ -13,7 +13,7 @@ public class Room {
 	
 	private String roomName; //name of the room represented as a string
 	private String roomCode; //code of the room represented as a string
-	private ArrayList<Item> item; //arraylist of item objects
+	private ArrayList<Item> itemList; //arraylist of item objects
 	
 	/**
 	 * returns the name of the room
@@ -55,21 +55,59 @@ public class Room {
 	public Room(String roomName, String roomCode) {
 		this.roomName = roomName;
 		this.roomCode = roomCode;
-		item = new ArrayList<Item>();
+		itemList = new ArrayList<Item>();
+	}
+	/**
+	 * constructor for the room object with no parameters
+	 * @param roomName
+	 * @param roomCode
+	 */
+	public Room() {
+		this.roomName = "DefaultNameRoom";
+		this.roomCode = "DefaultNameCode";
+		itemList = new ArrayList<Item>();
 	}
 	
 	/**
 	 * toString method that represents a room object
 	 */
 	public String toString() {
-		return String.format("Room: %s | Code: %s\n" + "%s" + "\n", roomName, roomCode, item.toString().replace("[", "").replace("]", "").replace(",", "").replace("\n ", "\n"));
+		return String.format("Room: %s | Code: %s\n" + "%s" + "\n", roomName, roomCode, itemList.toString().replace("[", "").replace("]", "").replace(",", "").replace("\n ", "\n"));
 	}
 	
 	/**
 	 * addItem method for adding items to a room
-	 * @param key
+	 * @param item
 	 */
-	public void addItem(Item key) {
-		item.add(key);
+	public void addItem(Item item) {
+		itemList.add(item);
 	}
+	/**
+	 * dropItem method for removing items from a room
+	 * @param item
+	 */
+	public void dropItem(Item item) {
+		itemList.remove(item);
+	}
+	
+	//This function will return item selected
+	public Item selectItem(String name) {
+		Item selectedItem = new Item();
+		Item curItem;
+		//Loop goes through itemList and finds the item
+		//with the same name as the one passed in
+		for(int i = 0; i < itemList.size(); i++)
+		{
+			//current item in the array
+			 curItem = itemList.get(i);
+			//If item name found
+			if((curItem.getItemName()).equals(name))
+			{
+				selectedItem = curItem;
+			}
+		}
+		//returns the item object after name was found
+		return selectedItem;
+	}
+	
 }

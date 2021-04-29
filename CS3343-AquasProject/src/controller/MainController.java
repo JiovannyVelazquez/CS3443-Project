@@ -13,6 +13,10 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import model.House;
+import model.Room;
+import model.Item;
+import model.Inventory;
+
 
 /**
  * MainController is a java class containing the method for when the user interacts with Main.fxml
@@ -37,18 +41,30 @@ public class MainController {
 	private Button room3Button;
 	@FXML
 	private Button room4Button;
-
+	@FXML
+	private Button doorButton;
+	@FXML
+	private Button inventoryButton;
 	@FXML
 	private Button gameStart;
-	
 	@FXML
 	private TextField item1Input;
 	@FXML
 	private TextField item2Input;
 	@FXML
+	private TextField pickUpInput;
+	@FXML
+	private TextField dropInput;
+	@FXML
 	private TextArea combOutput;
+	@FXML
+	private TextArea inventoryText;
 	
-	private House sH = new House("Spooky House");
+	private static int roomNum;
+	
+	private static House sH = new House("Spooky House");
+	
+	private static Inventory inventory = new Inventory();
 	
 	
 	public void setUpGame(ActionEvent event) throws IOException {
@@ -59,11 +75,13 @@ public class MainController {
 		Parent sceneParent = FXMLLoader.load(getClass().getResource("/view/Room1.fxml"));
 		Scene sceneX = new Scene(sceneParent);
 		
+		
 		//this line gets the stage information
-
 		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 		window.setScene(sceneX);
 		window.show();
+		//sets current room number for other functions to know what room we are in
+		roomNum = 1;
 	}
 	
 	/** benny helped make this
@@ -80,7 +98,8 @@ public class MainController {
 		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 		window.setScene(sceneX);
 		window.show();
-
+		//sets current room number for other functions to know what room we are in
+		roomNum = 1;
 	}
 	
 	/** benny helped make this
@@ -97,7 +116,8 @@ public class MainController {
 		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 		window.setScene(sceneX);
 		window.show();
-
+		//sets current room number for other functions to know what room we are in
+		roomNum = 2;
 	}
 	/** benny helped make this
 	 * when this method is called will changed the room2
@@ -113,7 +133,8 @@ public class MainController {
 		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 		window.setScene(sceneX);
 		window.show();
-
+		//sets current room number for other functions to know what room we are in
+		roomNum = 3;
 	}
 	/** benny helped make this
 	 * when this method is called will changed the room2
@@ -129,10 +150,31 @@ public class MainController {
 		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 		window.setScene(sceneX);
 		window.show();
+		//sets current room number for other functions to know what room we are in
+		roomNum = 4;
+	}
+	/** benny helped make this
+	 * when this method is called will changed the room2
+	 * @throws IOException 
+	 */
+	public void goToRoomDoor(ActionEvent event) throws IOException {
+		
+		Parent sceneParent = FXMLLoader.load(getClass().getResource("/view/Door.fxml"));
+		Scene sceneX = new Scene(sceneParent);
+		
+		//this line gets the stage information
 
+		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+		window.setScene(sceneX);
+		window.show();
+		//sets current room number for other functions to know what room we are in
+		roomNum = 5;
 	}
 	
-	public void combine() {
+	
+	//currently just gets input from btoh input boxes then adds
+	//the strings together. GOTTA IMPLEMENT REACTIONS
+	public void combine(ActionEvent event) throws IOException{
 		String input1 = item1Input.getText();
 		String input2 = item2Input.getText();
 		
@@ -140,5 +182,32 @@ public class MainController {
 		
 		//call the item reaction
 		//check the objects code
+	}
+	
+	//Calls the to string method and displays it in the inventory TextArea
+	public void setInventory(ActionEvent event) throws IOException{
+		
+		inventoryText.setText(inventory.toString());
+	}
+	
+	
+	public void pickUpItem(ActionEvent event) throws IOException {
+		String itemName = pickUpInput.getText();
+		Room roomGotten = sH.getRoomObject(roomNum);
+		
+		//Gets the item object from the room
+		Item itemPicked = roomGotten.selectItem(itemName);
+		
+		//testing print statement
+		System.out.print("This the item name gotten: "+itemPicked.getItemName()+"\n");
+		
+		//Adds Item to inventory and removes it from the current room
+		inventory.addItem(itemPicked);
+		roomGotten.dropItem(itemPicked);
+	}
+	public void dropItem(ActionEvent event) throws IOException {
+		//uncomment this and use it to start
+		//String itemName = dropInput.getText();
+		//Room roomGotten = sH.getRoomObject(roomNum);
 	}
 }
