@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="bodybg5" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
    <children>
       <ImageView fitHeight="391.0" fitWidth="634.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -59,16 +59,16 @@
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Button fx:id="room1Button" layoutX="19.0" layoutY="73.0" mnemonicParsing="false" onAction="#goToRoom1" text="Room 1" />
-            <Button fx:id="room2Button" layoutX="75.0" layoutY="73.0" mnemonicParsing="false" onAction="#goToRoom2" text="Room 2" />
-            <Button fx:id="room3Button" layoutX="19.0" layoutY="98.0" mnemonicParsing="false" onAction="#goToRoom3" text="Room 3" />
-            <Button fx:id="room4Button" layoutX="75.0" layoutY="98.0" mnemonicParsing="false" onAction="#goToRoom4" text="Room 4" />
-            <Button fx:id="doorButton" layoutX="19.0" layoutY="123.0" mnemonicParsing="false" onAction="#goToRoomDoor" prefHeight="25.0" prefWidth="57.0" text="Door" />
-            <Button layoutX="377.0" layoutY="47.0" mnemonicParsing="false" onAction="#combine" text="Combine" />
+            <Button fx:id="room1Button" layoutX="19.0" layoutY="73.0" mnemonicParsing="false" onAction="#goToRoom1" style="-fx-background-radius: 15; -fx-background-color: #936565;" text="Room 1" />
+            <Button fx:id="room2Button" layoutX="75.0" layoutY="73.0" mnemonicParsing="false" onAction="#goToRoom2" style="-fx-background-radius: 15; -fx-background-color: #936565;" text="Room 2" />
+            <Button fx:id="room3Button" layoutX="19.0" layoutY="98.0" mnemonicParsing="false" onAction="#goToRoom3" style="-fx-background-radius: 15; -fx-background-color: #936565;" text="Room 3" />
+            <Button fx:id="room4Button" layoutX="75.0" layoutY="98.0" mnemonicParsing="false" onAction="#goToRoom4" style="-fx-background-radius: 15; -fx-background-color: #936565;" text="Room 4" />
+            <Button fx:id="doorButton" layoutX="19.0" layoutY="123.0" mnemonicParsing="false" onAction="#goToRoomDoor" prefHeight="25.0" prefWidth="57.0" style="-fx-background-radius: 15; -fx-background-color: #936565;" text="Door" />
+            <Button layoutX="377.0" layoutY="47.0" mnemonicParsing="false" onAction="#combine" style="-fx-background-radius: 15; -fx-background-color: #936565;" text="Combine" />
             <TextField layoutX="174.0" layoutY="111.0" prefHeight="25.0" prefWidth="120.0" />
             <TextField layoutX="328.0" layoutY="111.0" prefHeight="25.0" prefWidth="120.0" />
-            <Button layoutX="206.0" layoutY="148.0" mnemonicParsing="false" text="Pick Up" />
-            <Button layoutX="360.0" layoutY="148.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="56.0" text="Drop" />
+            <Button layoutX="206.0" layoutY="148.0" mnemonicParsing="false" style="-fx-background-radius: 15; -fx-background-color: #936565;" text="Pick Up" />
+            <Button layoutX="360.0" layoutY="148.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="56.0" style="-fx-background-radius: 15; -fx-background-color: #936565;" text="Drop" />
          </children>
       </Pane>
       <Pane layoutX="636.0" prefHeight="382.0" prefWidth="264.0">
@@ -79,7 +79,7 @@
                </font>
             </Label>
             <TextArea fx:id="inventoryText" layoutX="10.0" layoutY="53.0" prefHeight="155.0" prefWidth="249.0" />
-            <Button layoutX="57.0" layoutY="216.0" mnemonicParsing="false" onAction="#setInventory" text="Display Current Inventory" />
+            <Button layoutX="57.0" layoutY="216.0" mnemonicParsing="false" onAction="#setInventory" style="-fx-background-radius: 15; -fx-background-color: #936565;" text="Display Current Inventory" />
          </children>
       </Pane>
    </children>

@@ -1,1 +1,26 @@
 /* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.bodybg{
+	-fx-background-image: url("/application/roomMirror.jpg") ;
+	
+	-fx-background-size: 100% 100%;
+}
+.bodybg2{
+	-fx-background-image: url("/application/mainRoom.jpeg") ;
+	
+	-fx-background-size: 100% 100%;
+}
+.bodybg3{
+	-fx-background-image: url("/application/lampRoom.jpeg") ;
+	
+	-fx-background-size: 100% 100%;
+}
+.bodybg4{
+	-fx-background-image: url("/application/thedoor4.png") ;
+	
+	-fx-background-size: 100% 100%;
+}
+.bodybg5{
+	-fx-background-image: url("/application/thedoor.jpeg") ;
+	
+	-fx-background-size: 100% 100%;
+}
