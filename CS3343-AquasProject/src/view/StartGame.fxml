@@ -11,7 +11,7 @@
    <children>
       <ImageView fitHeight="550.0" fitWidth="800.0" layoutY="-14.0" pickOnBounds="true">
          <image>
-            <Image url="@../../images_rooms%20/house2.jpeg" />
+            <Image url="@../../images%20rooms%20game/house2.jpeg" />
          </image>
       </ImageView>
       <Button layoutX="609.0" layoutY="542.0" mnemonicParsing="false" onAction="#setUpGame" prefHeight="24.0" prefWidth="147.0" style="-fx-background-color: black;" text="Click here to start">
