@@ -24,15 +24,25 @@
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Label>
-            <Label text="It is dark, you can somewhat see the walls" textFill="#936565">
+            <Label text="This looks like a bedroom...but where is" textFill="#936565">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Label>
-            <Label text="somethings are hanging from the walls, bones." textFill="#936565">
+            <Label text="the bed?" textFill="#936565">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Label>
-            <Label text="This is another sentence" textFill="#936565">
+            <Label text="You notice an object shining as a result of" textFill="#936565">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label text="moonlight coming from the nearby window." textFill="#936565">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label text="It's a key with a note that says &quot;key1&quot; on it." textFill="#936565">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

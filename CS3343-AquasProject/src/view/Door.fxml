@@ -24,15 +24,15 @@
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Label>
-            <Label text="It is dark, you can somewhat see the walls" textFill="#936565">
+            <Label text="Here it is...my only way out." textFill="#936565">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Label>
-            <Label text="somethings are hanging from the walls, bones." textFill="#936565">
+            <Label text="4 locks so there must be 4 keys around here." textFill="#936565">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Label>
-            <Label text="This is another sentence" textFill="#936565">
+            <Label text="After I unlock them all I should be free!" textFill="#936565">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

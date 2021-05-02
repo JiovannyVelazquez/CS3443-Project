@@ -17,15 +17,20 @@
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Label>
-            <Label text="It is dark, you can somewhat see the walls" textFill="#936565">
+            <Label text="A giatnt living space that connects all of" textFill="#936565">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Label>
-            <Label text="somethings are hanging from the walls, bones." textFill="#936565">
+            <Label text="the rooms. Doesn't look very alive..." textFill="#936565">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Label>
-            <Label text="This is another sentence" textFill="#936565">
+            <Label text="A small rusted object is laying on the table." textFill="#936565">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label text="A key! It's labeled &quot;key2&quot;." textFill="#936565">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
