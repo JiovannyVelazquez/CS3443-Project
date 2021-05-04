@@ -24,3 +24,9 @@
 	
 	-fx-background-size: 100% 100%;
 }
+.bodybg6{
+	-fx-background-image: url("/application/final1.jpeg") ;
+	
+	-fx-background-size: 100% 100%;
+	
+}

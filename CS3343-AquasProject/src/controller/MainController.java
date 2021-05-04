@@ -1,10 +1,13 @@
 package controller;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -25,7 +28,7 @@ import model.Inventory;
  * UTSA CS 3443.002 - TeamProject
  * Spring 2021
  */
-public class MainController {
+public class MainController implements Initializable{
 
 	@FXML
 	private Button combineButton;
@@ -230,5 +233,16 @@ public class MainController {
 		roomGotten.addItem(itemDropping);
 		//Removes item from inventory
 		inventory.dropItem(itemDropping);
+	}
+
+	@Override
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		
+		//this desable the rooms2buttom,room3buttom,doorbuttoms.
+	/*	room1Button.setDisable(true);
+		room2Button.setDisable(true);
+		room3Button.setDisable(true);
+		this.doorButton.setDisable(true);*/
+		
 	}
 }
