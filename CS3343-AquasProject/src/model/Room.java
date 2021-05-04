@@ -129,4 +129,53 @@ public class Room {
 		itemList.add(roomKey);
 		
 	}
+	
+	//Author: Jiovanny (rhv754)
+	//Used to check if door is out of locks to then end game
+	public boolean empty() {
+		boolean empty = false;
+		
+		System.out.println("Size of list: " + itemList.size());
+		if(itemList.size()==0) {
+			empty = true;
+		}
+		return empty;
+	}
+	
+	/**
+	 * dropItem method for removing items from a room
+	 * @param item
+	 */
+	public void dropLock(String itemName) {
+		Item selectedItem = new Item();
+		Item curItem;
+		String lockName = "";
+		if(itemName.equals("key1")) {
+			lockName = "lock1";
+		}
+		if(itemName.equals("key2")) {
+			lockName = "lock2";
+		}
+		if(itemName.equals("key3")) {
+			lockName = "lock3";
+		}
+		if(itemName.equals("key4")) {
+			lockName = "lock4";
+		}
+		
+		//Loop goes through itemList and finds the item
+		//with the same name as the one passed in
+		for(int i = 0; i < itemList.size(); i++)
+		{
+			//current item in the array
+			 curItem = itemList.get(i);
+			//If item name found
+			if((curItem.getItemName()).equals(lockName))
+			{
+				selectedItem = curItem;
+			}
+		}
+		
+		itemList.remove(selectedItem);
+	}
 }

@@ -48,8 +48,16 @@ public class MainController implements Initializable{
 	@FXML
 	private Button doorButton;
 	@FXML
-	private  Button scapeButton;
-
+	private Button scapeButton;
+	@FXML
+	private Button lock1Button;
+	@FXML
+	private Button lock2Button;
+	@FXML
+	private Button lock3Button;
+	@FXML
+	private Button lock4Button;
+	
 	@FXML
 	private Button inventoryButton;
 	@FXML
@@ -257,6 +265,12 @@ public class MainController implements Initializable{
 		Room roomGotten = sH.getRoomObject(roomNum);
 		roomItemsText.setText(roomGotten.toString());
 	}
+	//Author: Jiovanny (rhv754)
+	//Calls the to string method and displays it in the inventory TextArea
+	public void setInventoryInDoor(ActionEvent event) throws IOException{
+		//sets the inventory for player
+		inventoryText.setText(inventory.toString());
+	}
 	
 	//Author: Jiovanny (rhv754)
 	public void pickUpItem(ActionEvent event) throws IOException {
@@ -303,21 +317,48 @@ public class MainController implements Initializable{
 		 * if ()user has 4 keys then {
 		 */
 		
-		//Benny
-		scapeButton.setDisable(false);
+		//Checking to see if all locks are gone to then switch scenes
+		if(sH.getRoomObject(5).empty()) {
+			//Benny
+			scapeButton.setDisable(false);
 
-		Parent sceneParent = FXMLLoader.load(getClass().getResource("/view/FinalScreen.fxml"));
-		Scene sceneX = new Scene(sceneParent);
-		
-		//this line gets the stage information
+			Parent sceneParent = FXMLLoader.load(getClass().getResource("/view/FinalScreen.fxml"));
+			Scene sceneX = new Scene(sceneParent);
+			
+			//this line gets the stage information
 
-		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-		window.setScene(sceneX);
-		window.show();
-		
+			Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+			window.setScene(sceneX);
+			window.show();
+		}
 		
 	}
-
+	//Author: Jiovanny (rhv754)
+	public void remove1Lock(ActionEvent event) throws IOException {
+		Item key = inventory.selectItem("key1");
+		System.out.println(key.getItemName());
+		(sH.getRoomObject(5)).dropLock(key.getItemName());
+	}
+	//Author: Jiovanny (rhv754)
+	public void remove2Lock(ActionEvent event) throws IOException {
+		Item key = inventory.selectItem("key2");
+		System.out.println(key.getItemName());
+		(sH.getRoomObject(5)).dropLock(key.getItemName());
+	}
+	//Author: Jiovanny (rhv754)
+	public void remove3Lock(ActionEvent event) throws IOException {
+		Item key = inventory.selectItem("key3");
+		System.out.println(key.getItemName());
+		(sH.getRoomObject(5)).dropLock(key.getItemName());
+	}
+	//Author: Jiovanny (rhv754)
+	public void remove4Lock(ActionEvent event) throws IOException {
+		Item key = inventory.selectItem("key4");
+		System.out.println(key.getItemName());
+		(sH.getRoomObject(5)).dropLock(key.getItemName());
+	}
+	
+	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
