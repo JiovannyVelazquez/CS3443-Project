@@ -1,10 +1,12 @@
 package application;
 	
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 
 /**
  * Main is a java class containing the main method to run the program
@@ -14,6 +16,8 @@ import javafx.scene.Scene;
  * Spring 2021
  */
 public class Main extends Application {
+
+	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -29,6 +33,8 @@ public class Main extends Application {
 	}
 	
 	public static void main(String[] args) {
+		
+		
 		launch(args);
 	}
 }

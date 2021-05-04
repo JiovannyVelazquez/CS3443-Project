@@ -14,6 +14,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import model.House;
 import model.Room;
@@ -47,6 +48,9 @@ public class MainController implements Initializable{
 	@FXML
 	private Button doorButton;
 	@FXML
+	private  Button scapeButton;
+
+	@FXML
 	private Button inventoryButton;
 	@FXML
 	private Button gameStart;
@@ -65,13 +69,18 @@ public class MainController implements Initializable{
 	@FXML
 	private TextArea roomItemsText;
 	
+	
 	private static int roomNum;
 	
 	private static House sH = new House("Spooky House");
 	
 	private static Inventory inventory = new Inventory();
 	
-	
+	/**
+	 *  Author: ask634 benny sainz
+	 * @param event
+	 * @throws IOException
+	 */
 	public void setUpGame(ActionEvent event) throws IOException {
 		sH.loadRooms("data/Rooms.csv");
 		sH.loadItems("data/Items.csv");
@@ -88,8 +97,29 @@ public class MainController implements Initializable{
 		//sets current room number for other functions to know what room we are in
 		roomNum = 1;
 	}
+	/**
+	 *  Author: ask634 benny sainz
+	 * keyEvent method to Start Game , by pressing any key the game will start
+	 */
+	@FXML
+	public void setUpGame2(KeyEvent event) throws IOException {
+		sH.loadRooms("data/Rooms.csv");
+		sH.loadItems("data/Items.csv");
+		
+		//Changes Screen
+		Parent sceneParent = FXMLLoader.load(getClass().getResource("/view/Room1.fxml"));
+		Scene sceneX = new Scene(sceneParent);
+		
+		
+		//this line gets the stage information
+		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+		window.setScene(sceneX);
+		window.show();
+		//sets current room number for other functions to know what room we are in
+		roomNum = 1;
+	}
 	
-	/** benny helped make this
+	/** Author: ask634 benny sainz
 	 * when this method is called will changed the room
 	 * @throws IOException 
 	 */
@@ -108,7 +138,7 @@ public class MainController implements Initializable{
 		roomNum = 1;
 	}
 	
-	/** benny helped make this
+	/**  Author: ask634 benny sainz
 	 * when this method is called will changed the room2
 	 * @throws IOException 
 	 */
@@ -125,7 +155,7 @@ public class MainController implements Initializable{
 		//sets current room number for other functions to know what room we are in
 		roomNum = 2;
 	}
-	/** benny helped make this
+	/**  Author: ask634 benny sainz
 	 * when this method is called will changed the room2
 	 * @throws IOException 
 	 */
@@ -142,7 +172,7 @@ public class MainController implements Initializable{
 		//sets current room number for other functions to know what room we are in
 		roomNum = 3;
 	}
-	/** benny helped make this
+	/**  Author: ask634 benny sainz
 	 * when this method is called will changed the room2
 	 * @throws IOException 
 	 */
@@ -159,11 +189,13 @@ public class MainController implements Initializable{
 		//sets current room number for other functions to know what room we are in
 		roomNum = 4;
 	}
-	/** benny helped make this
+	/** Author: ask634 benny sainz
 	 * when this method is called will changed the room2
 	 * @throws IOException 
 	 */
 	public void goToRoomDoor(ActionEvent event) throws IOException {
+
+		
 		
 		Parent sceneParent = FXMLLoader.load(getClass().getResource("/view/Door.fxml"));
 		Scene sceneX = new Scene(sceneParent);
@@ -175,6 +207,8 @@ public class MainController implements Initializable{
 		window.show();
 		//sets current room number for other functions to know what room we are in
 		roomNum = 5;
+		
+		
 	}
 	
 	//currently just gets input from btoh input boxes then adds
@@ -234,15 +268,41 @@ public class MainController implements Initializable{
 		//Removes item from inventory
 		inventory.dropItem(itemDropping);
 	}
+	/**
+	 * 
+	 * @param event
+	 * @throws IOException
+	 */
+	
+	public void scapeMethod(ActionEvent event) throws IOException {
+		/**
+		 * TODO needs update when player finally has the 4 keys,
+		 *  scape-button will disable so the player can 
+		 * pushed it to scape and get the final screen
+		 * 
+		 * 
+		 * if ()user has 4 keys then {
+		 */
+		
+		
+		scapeButton.setDisable(false);
+
+		Parent sceneParent = FXMLLoader.load(getClass().getResource("/view/FinalScreen.fxml"));
+		Scene sceneX = new Scene(sceneParent);
+		
+		//this line gets the stage information
+
+		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
+		window.setScene(sceneX);
+		window.show();
+		
+		
+	}
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
-		//this desable the rooms2buttom,room3buttom, doorbuttoms.
-	/*	room1Button.setDisable(true);
-		room2Button.setDisable(true);
-		room3Button.setDisable(true);
-		this.doorButton.setDisable(true);*/
-		
+		//set disable button until player gets the 4 keys
+		scapeButton.setDisable(true);
 	}
 }

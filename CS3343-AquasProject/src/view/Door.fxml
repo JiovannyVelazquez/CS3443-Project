@@ -69,6 +69,7 @@
             <TextField layoutX="328.0" layoutY="111.0" prefHeight="25.0" prefWidth="120.0" />
             <Button layoutX="206.0" layoutY="148.0" mnemonicParsing="false" style="-fx-background-radius: 15; -fx-background-color: #936565;" text="Pick Up" />
             <Button layoutX="360.0" layoutY="148.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="56.0" style="-fx-background-radius: 15; -fx-background-color: #936565;" text="Drop" />
+            <Button fx:id="scapeButton" layoutX="77.0" layoutY="125.0" mnemonicParsing="false" onAction="#scapeMethod" prefHeight="25.0" prefWidth="57.0" style="-fx-background-radius: 15; -fx-background-color: #49e749;" text="Scape" textFill="#1d1e1de8" />
          </children>
       </Pane>
       <Pane layoutX="636.0" prefHeight="382.0" prefWidth="264.0">
