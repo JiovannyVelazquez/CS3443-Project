@@ -303,6 +303,6 @@ public class MainController implements Initializable{
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
 		//set disable button until player gets the 4 keys
-		scapeButton.setDisable(true);
+		//scapeButton.setDisable(true);
 	}
 }
