@@ -238,7 +238,7 @@ public class MainController implements Initializable{
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
-		//this desable the rooms2buttom,room3buttom,doorbuttoms.
+		//this desable the rooms2buttom,room3buttom, doorbuttoms.
 	/*	room1Button.setDisable(true);
 		room2Button.setDisable(true);
 		room3Button.setDisable(true);
