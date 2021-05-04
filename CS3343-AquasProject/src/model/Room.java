@@ -14,6 +14,8 @@ public class Room {
 	private String roomName; //name of the room represented as a string
 	private String roomCode; //code of the room represented as a string
 	private ArrayList<Item> itemList; //arraylist of item objects
+	//Used to hide the key until proper combine is executed
+	private Item roomKey = new Item();
 	
 	/**
 	 * returns the name of the room
@@ -72,7 +74,11 @@ public class Room {
 	 * toString method that represents a room object
 	 */
 	public String toString() {
-		return String.format("Room: %s | Code: %s\n" + "%s" + "\n", roomName, roomCode, itemList.toString().replace("[", "").replace("]", "").replace(",", "").replace("\n ", "\n"));
+		String roomText = "";
+		for(int i = 0; i < itemList.size(); i++) {
+			roomText = roomText + (itemList.get(i)).getItemName()+ "\n";
+		}
+		return roomText;
 	}
 	
 	/**
@@ -90,6 +96,7 @@ public class Room {
 		itemList.remove(item);
 	}
 	
+	//Author: Jiovanny (rhv754)
 	//This function will return item selected
 	public Item selectItem(String name) {
 		Item selectedItem = new Item();
@@ -109,5 +116,16 @@ public class Room {
 		//returns the item object after name was found
 		return selectedItem;
 	}
-	
+	//Author: Jiovanny (rhv754)
+	//This method will be called by the loadItems in house
+	//to ensure the key is not yet available to players
+	public void createKey(Item item) {
+		roomKey = item;
+	}
+	//Author: Jiovanny (rhv754)
+	//This method adds the key to the room after
+	//designated combine takes place
+	public void addKeyToRoom() {
+		itemList.add(roomKey);
+	}
 }

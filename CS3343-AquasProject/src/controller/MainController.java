@@ -59,6 +59,8 @@ public class MainController {
 	private TextArea combOutput;
 	@FXML
 	private TextArea inventoryText;
+	@FXML
+	private TextArea roomItemsText;
 	
 	private static int roomNum;
 	
@@ -98,6 +100,7 @@ public class MainController {
 		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
 		window.setScene(sceneX);
 		window.show();
+		
 		//sets current room number for other functions to know what room we are in
 		roomNum = 1;
 	}
@@ -171,26 +174,35 @@ public class MainController {
 		roomNum = 5;
 	}
 	
-	
 	//currently just gets input from btoh input boxes then adds
 	//the strings together. GOTTA IMPLEMENT REACTIONS
 	public void combine(ActionEvent event) throws IOException{
+		//Gets input from textboxes
 		String input1 = item1Input.getText();
 		String input2 = item2Input.getText();
 		
+		//****************UNCOMMENT THIS LATER**********
+		//converts input to item objects
+		//Item itemPicked1 = inventory.selectItem(input1);
+		//Item itemPicked2 = inventory.selectItem(input2);
+		//here we are going to have to compare the code of each item
+		
 		combOutput.setText(input1 + " ||| " + input2);
 		
-		//call the item reaction
-		//check the objects code
+		
 	}
 	
+	//Author: Jiovanny (rhv754)
 	//Calls the to string method and displays it in the inventory TextArea
 	public void setInventory(ActionEvent event) throws IOException{
-		
+		//sets the inventory for player
 		inventoryText.setText(inventory.toString());
+		//sets the items for the room
+		Room roomGotten = sH.getRoomObject(roomNum);
+		roomItemsText.setText(roomGotten.toString());
 	}
 	
-	
+	//Author: Jiovanny (rhv754)
 	public void pickUpItem(ActionEvent event) throws IOException {
 		String itemName = pickUpInput.getText();
 		Room roomGotten = sH.getRoomObject(roomNum);
@@ -205,9 +217,18 @@ public class MainController {
 		inventory.addItem(itemPicked);
 		roomGotten.dropItem(itemPicked);
 	}
+	//Author: Jiovanny (rhv754)
 	public void dropItem(ActionEvent event) throws IOException {
-		//uncomment this and use it to start
-		//String itemName = dropInput.getText();
-		//Room roomGotten = sH.getRoomObject(roomNum);
+		//Gets the name and establishes what room we are currently in
+		String itemName = dropInput.getText();
+		Room roomGotten = sH.getRoomObject(roomNum);
+		//Gets the item from inventory to be dropped
+		Item itemDropping = inventory.selectItem(itemName);
+		//testing print statement
+		System.out.print("This the item name gotten: "+itemDropping.getItemName()+"\n");
+		//Adds item to room
+		roomGotten.addItem(itemDropping);
+		//Removes item from inventory
+		inventory.dropItem(itemDropping);
 	}
 }
