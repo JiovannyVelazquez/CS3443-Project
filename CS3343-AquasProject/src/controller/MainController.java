@@ -211,8 +211,7 @@ public class MainController implements Initializable{
 		
 	}
 	
-	//currently just gets input from btoh input boxes then adds
-	//the strings together. GOTTA IMPLEMENT REACTIONS
+	//Author: Jiovanny (rhv754)
 	public void combine(ActionEvent event) throws IOException{
 		//Gets input from textboxes
 		String input1 = item1Input.getText();
@@ -220,12 +219,32 @@ public class MainController implements Initializable{
 		
 		//****************UNCOMMENT THIS LATER**********
 		//converts input to item objects
-		//Item itemPicked1 = inventory.selectItem(input1);
-		//Item itemPicked2 = inventory.selectItem(input2);
+		Item itemPicked1 = inventory.selectItem(input1);
+		Item itemPicked2 = inventory.selectItem(input2);
 		//here we are going to have to compare the code of each item
+		System.out.println("Code of item1: "+itemPicked1.getItemRoomCode());
+		System.out.println("Code of item1: "+itemPicked2.getItemRoomCode());
 		
-		combOutput.setText(input1 + " ||| " + input2);
-		
+		if(itemPicked1.getItemCode().equals(itemPicked2.getItemCode())) {
+			//will discover key for room1
+			if(itemPicked1.getItemCode().equals("p1")) {
+				sH.addKeyToRoom(1);
+			}
+			//will discover key for room1
+			if(itemPicked1.getItemCode().equals("p2")) {
+				sH.addKeyToRoom(2);
+			}
+			//will discover key for room1
+			if(itemPicked1.getItemCode().equals("p3")) {
+				sH.addKeyToRoom(3);
+			}
+			//will discover key for room1
+			if(itemPicked1.getItemCode().equals("p4")) {
+				sH.addKeyToRoom(4);
+			}
+			
+			combOutput.setText(itemPicked1.getItemCode());
+		}
 		
 	}
 	
@@ -284,7 +303,7 @@ public class MainController implements Initializable{
 		 * if ()user has 4 keys then {
 		 */
 		
-		
+		//Benny
 		scapeButton.setDisable(false);
 
 		Parent sceneParent = FXMLLoader.load(getClass().getResource("/view/FinalScreen.fxml"));

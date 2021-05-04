@@ -76,8 +76,20 @@ public class House {
 		    while (roomArray.size() > count) { 
 		    	String curRoom = roomArray.get(count).getRoomCode();
 		    	
-		    	if (curRoom.equals(itemRoomCode)) { 
-		    		(roomArray.get(count)).addItem(item); 
+		    	//Room curRoomObj = roomArray.get(count);
+		    	//Hides the key for later to be unlocked via combine button
+		    	if(((itemName.equals("key1")) && (itemRoomCode.equals(curRoom))) ||
+		    			((itemName.equals("key2")) && (itemRoomCode.equals(curRoom))) ||
+		    			((itemName.equals("key3")) && (itemRoomCode.equals(curRoom))) ||
+		    			((itemName.equals("key4")) && (itemRoomCode.equals(curRoom)))) {
+		    		(roomArray.get(count)).createKey(item);
+		    		count = roomArray.size();
+		    		
+		    	}
+		    	//adds everything to the room
+		    	else if (curRoom.equals(itemRoomCode)) { 
+		    		(roomArray.get(count)).addItem(item);
+		    		count = roomArray.size();
 		    	}
 		    	count++;
 		    }
@@ -108,5 +120,10 @@ public class House {
 	public Room getRoomObject(int roomNum) {
 		//Returns room object based on current room number
 		return roomArray.get(roomNum-1);
+	}
+	//Adds the key to room based on the reaction done in combine
+	public void addKeyToRoom(int roomNum) {
+		
+		(roomArray.get(roomNum-1)).addKeyToRoom();
 	}
 }

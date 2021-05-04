@@ -15,7 +15,7 @@ public class Room {
 	private String roomCode; //code of the room represented as a string
 	private ArrayList<Item> itemList; //arraylist of item objects
 	//Used to hide the key until proper combine is executed
-	private Item roomKey = new Item();
+	private Item roomKey;
 	
 	/**
 	 * returns the name of the room
@@ -127,5 +127,6 @@ public class Room {
 	//designated combine takes place
 	public void addKeyToRoom() {
 		itemList.add(roomKey);
+		
 	}
 }
