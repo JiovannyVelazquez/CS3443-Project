@@ -9,7 +9,7 @@ import javafx.scene.Scene;
 /**
  * Main is a java class containing the main method to run the program
  *  
- * @author Conagher Spaugh (pqj572), Bezaleel sainz(ask634),
+ * @author Conagher Spaugh (pqj572), Bezaleel sainz(ask634),Jiovanny velazquez
  * UTSA CS 3443.002 - TeamProject
  * Spring 2021
  */

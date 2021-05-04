@@ -90,7 +90,7 @@ public class MainController implements Initializable{
 	}
 	
 	/** benny helped make this
-	 * when this method is called will changed the room2
+	 * when this method is called will changed the room
 	 * @throws IOException 
 	 */
 	public void goToRoom1(ActionEvent event) throws IOException {
