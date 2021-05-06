@@ -85,7 +85,7 @@ public class MainController implements Initializable{
 	private static Inventory inventory = new Inventory();
 	
 	/**
-	 *  Author: ask634 benny sainz
+	 *  @author ask634 bezaleel sainz
 	 * @param event
 	 * @throws IOException
 	 */
@@ -106,7 +106,7 @@ public class MainController implements Initializable{
 		roomNum = 1;
 	}
 	/**
-	 *  Author: ask634 benny sainz
+	 *   @author ask634 bezaleel sainz
 	 * keyEvent method to Start Game , by pressing any key the game will start
 	 */
 	@FXML
@@ -127,7 +127,7 @@ public class MainController implements Initializable{
 		roomNum = 1;
 	}
 	
-	/** Author: ask634 benny sainz
+	/**  @author ask634 bezaleel sainz
 	 * when this method is called will changed the room
 	 * @throws IOException 
 	 */
@@ -146,7 +146,7 @@ public class MainController implements Initializable{
 		roomNum = 1;
 	}
 	
-	/**  Author: ask634 benny sainz
+	/**  @author ask634 bezaleel sainz
 	 * when this method is called will changed the room2
 	 * @throws IOException 
 	 */
@@ -163,7 +163,7 @@ public class MainController implements Initializable{
 		//sets current room number for other functions to know what room we are in
 		roomNum = 2;
 	}
-	/**  Author: ask634 benny sainz
+	/**  @author ask634 bezaleel sainz
 	 * when this method is called will changed the room2
 	 * @throws IOException 
 	 */
@@ -180,7 +180,7 @@ public class MainController implements Initializable{
 		//sets current room number for other functions to know what room we are in
 		roomNum = 3;
 	}
-	/**  Author: ask634 benny sainz
+	/**   @author ask634 bezaleel sainz
 	 * when this method is called will changed the room2
 	 * @throws IOException 
 	 */
@@ -197,7 +197,7 @@ public class MainController implements Initializable{
 		//sets current room number for other functions to know what room we are in
 		roomNum = 4;
 	}
-	/** Author: ask634 benny sainz
+	/**  @author ask634 bezaleel sainz
 	 * when this method is called will changed the room2
 	 * @throws IOException 
 	 */
@@ -302,7 +302,7 @@ public class MainController implements Initializable{
 		inventory.dropItem(itemDropping);
 	}
 	/**
-	 * 
+	 * @author  bezaleel sainz (ask634)
 	 * @param event
 	 * @throws IOException
 	 */
@@ -319,7 +319,7 @@ public class MainController implements Initializable{
 		
 		//Checking to see if all locks are gone to then switch scenes
 		if(sH.getRoomObject(5).empty()) {
-			//Benny
+			//
 			scapeButton.setDisable(false);
 
 			Parent sceneParent = FXMLLoader.load(getClass().getResource("/view/FinalScreen.fxml"));
@@ -363,6 +363,6 @@ public class MainController implements Initializable{
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
 		//set disable button until player gets the 4 keys
-		//scapeButton.setDisable(true);
+		scapeButton.setDisable(true);
 	}
 }
