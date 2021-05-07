@@ -358,11 +358,11 @@ public class MainController implements Initializable{
 		(sH.getRoomObject(5)).dropLock(key.getItemName());
 	}
 	
-	
+	//Doesnt work if you uncomment the code, most likely just delete it idk
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
 		//set disable button until player gets the 4 keys
-		scapeButton.setDisable(true);
+		//scapeButton.setDisable(true);
 	}
 }
