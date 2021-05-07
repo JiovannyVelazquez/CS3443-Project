@@ -25,16 +25,16 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label text="combine items ." textFill="#c3c2c2">
+            <Label text="combine items, every room has its own key." textFill="#c3c2c2">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label prefHeight="24.0" prefWidth="422.0" text="This is room 1:" textFill="#936565">
+            <Label prefHeight="24.0" prefWidth="422.0" text="Start by clicking the current inventory button." textFill="#c3c2c2">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Label>
-            <Label text="This looks like a bedroom...but where is" textFill="#936565">
+            <Label text="This is room 1: This looks like a bedroom...but where is" textFill="#936565">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Label>
@@ -91,7 +91,7 @@
             <Button fx:id="dropButton" layoutX="360.0" layoutY="148.0" mnemonicParsing="false" onAction="#dropItem" prefHeight="25.0" prefWidth="56.0" style="-fx-background-radius: 15; -fx-background-color: #936565;" text="Drop" />
          </children>
       </Pane>
-      <Pane layoutX="636.0" prefHeight="382.0" prefWidth="264.0">
+      <Pane layoutX="636.0" layoutY="1.0" prefHeight="382.0" prefWidth="264.0">
          <children>
             <Label layoutX="7.0" prefHeight="37.0" prefWidth="174.0" text="Inventory" textFill="#c3c2c2">
                <font>
@@ -99,8 +99,8 @@
                </font>
             </Label>
             <TextArea fx:id="inventoryText" layoutX="10.0" layoutY="53.0" prefHeight="155.0" prefWidth="249.0" />
-            <Button layoutX="57.0" layoutY="216.0" mnemonicParsing="false" onAction="#setInventory" style="-fx-background-radius: 15; -fx-background-color: #936565;" text="Display Current Inventory" />
-            <TextArea fx:id="roomItemsText" layoutX="8.0" layoutY="295.0" prefHeight="78.0" prefWidth="249.0" />
+            <Button layoutX="54.0" layoutY="219.0" mnemonicParsing="false" onAction="#setInventory" style="-fx-background-radius: 15; -fx-background-color: #936565;" text="Display Current Inventory" />
+            <TextArea fx:id="roomItemsText" layoutX="8.0" layoutY="295.0" prefHeight="73.0" prefWidth="239.0" />
             <Label layoutX="10.0" layoutY="258.0" prefHeight="37.0" prefWidth="180.0" text="Items In Room" textFill="#c3c2c2">
                <font>
                   <Font name="System Bold" size="20.0" />
