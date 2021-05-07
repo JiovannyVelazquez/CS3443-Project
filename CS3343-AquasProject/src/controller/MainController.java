@@ -236,6 +236,7 @@ public class MainController implements Initializable{
 		if(itemPicked1.getItemCode().equals(itemPicked2.getItemCode())) {
 			//will discover key for room1
 			if(itemPicked1.getItemCode().equals("p1")) {
+				
 				sH.addKeyToRoom(1);
 			}
 			//will discover key for room1
@@ -308,19 +309,10 @@ public class MainController implements Initializable{
 	 */
 	
 	public void scapeMethod(ActionEvent event) throws IOException {
-		/**
-		 * TODO needs update when player finally has the 4 keys,
-		 *  scape-button will disable so the player can 
-		 * pushed it to scape and get the final screen
-		 * 
-		 * 
-		 * if ()user has 4 keys then {
-		 */
 		
 		//Checking to see if all locks are gone to then switch scenes
 		if(sH.getRoomObject(5).empty()) {
-			//
-			scapeButton.setDisable(false);
+			
 
 			Parent sceneParent = FXMLLoader.load(getClass().getResource("/view/FinalScreen.fxml"));
 			Scene sceneX = new Scene(sceneParent);
@@ -358,11 +350,10 @@ public class MainController implements Initializable{
 		(sH.getRoomObject(5)).dropLock(key.getItemName());
 	}
 	
-	//Doesnt work if you uncomment the code, most likely just delete it idk
+	
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
-		//set disable button until player gets the 4 keys
-		//scapeButton.setDisable(true);
+		
 	}
 }
