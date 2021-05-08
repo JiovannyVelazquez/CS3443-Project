@@ -30,20 +30,10 @@
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Label>
-            <Label text="door. EW! Is that a hand? It looks to be holding " textFill="#936565">
+            <Label text="door. EW! Is that a hand?" textFill="#936565">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Label>
-            <Label text="onto something. A key!" textFill="#936565">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Label>
-            <Label text="It's called &quot;key4&quot;." textFill="#936565">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Label>
          </children>
       </VBox>
       <Pane layoutX="420.0" layoutY="399.0" prefHeight="200.0" prefWidth="480.0">

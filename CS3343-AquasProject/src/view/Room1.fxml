@@ -15,44 +15,25 @@
    <children>
       <VBox layoutX="14.0" layoutY="382.0" prefHeight="184.0" prefWidth="421.0">
          <children>
-            <Label text="Directions-&gt; The purpose of this game is to scape the " textFill="#c3c2c2">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Label text="house  by finding the 4 keys, to find a key you must " textFill="#c3c2c2">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Label text="combine items, every room has its own key." textFill="#c3c2c2">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Label prefHeight="24.0" prefWidth="422.0" text="Start by clicking the current inventory button." textFill="#c3c2c2">
+            <Label text="This is room 1:" textFill="#936565">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Label>
-            <Label text="This is room 1: This looks like a bedroom...but where is" textFill="#936565">
+            <Label text="This looks like a bedroom..." textFill="#936565">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Label>
-            <Label text="the bed?" textFill="#936565">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font></Label>
-            <Label text="You notice an object shining as a result of" textFill="#936565">
+            <Label text="but where is the bed?" textFill="#936565">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label text="moonlight coming from the nearby window." textFill="#936565">
+            <Label layoutX="10.0" layoutY="64.0" text="Maybe there is something I can " textFill="#936565">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
-            <Label text="It's a key with a note that says &quot;key1&quot; on it." textFill="#936565">
+            <Label layoutX="10.0" layoutY="91.0" text="use around here,,," textFill="#936565">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>

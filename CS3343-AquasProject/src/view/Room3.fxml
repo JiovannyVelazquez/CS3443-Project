@@ -34,16 +34,6 @@
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Label>
-            <Label text="Hanging on the wall is a key." textFill="#936565">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Label>
-            <Label text="The words &quot;key3&quot; are eerily scratched onto it." textFill="#936565">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </Label>
          </children>
       </VBox>
       <Pane layoutX="420.0" layoutY="399.0" prefHeight="200.0" prefWidth="480.0">
